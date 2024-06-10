@@ -190,7 +190,7 @@
                 <li class="active"><a>Trang chủ</a></li>
                 <li><a href="${project}/store">Sản phẩm</a></li>
                 <li><a href="/about">Về chúng tôi</a></li>
-                <li><a href="/contactController">Liên hệ</a></li>
+                <li><a href="/contact">Liên hệ</a></li>
                 <!-- /NAV -->
             </ul>
         </div>
@@ -210,10 +210,10 @@
             <div class="col-md-4 col-xs-6">
                 <div class="shop">
                     <div class="shop-img">
-                        <img src="./image/mockhoago.jpg" alt="">
+                        <img src="./image/bim-bim-1.jpg" alt="">
                     </div>
                     <div class="shop-body">
-                        <h3>Móc khóa<br>Bộ sưu tập</h3>
+                        <h3>Bim Bim<br>Mua ngay</h3>
                         <a href="/category?cid=MK" class="cta-btn">Mua ngay<i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
@@ -224,11 +224,11 @@
             <div class="col-md-4 col-xs-6">
                 <div class="shop">
                     <div class="shop-img">
-                        <img src="./image/dc8.jpg" alt="">
+                        <img src="./image/nenhat.png" alt="">
                     </div>
                     <div class="shop-body">
-                        <h3>Dreamcatcher<br>Bộ sưu tập</h3>
-                        <a href="/category?cid=DC" class="cta-btn">Mua ngay<i class="fa fa-arrow-circle-right"></i></a>
+                        <h3>Hạt<br>Mua ngay</h3>
+                        <a href="/category?cid=H" class="cta-btn">Mua ngay<i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -238,11 +238,11 @@
             <div class="col-md-4 col-xs-6">
                 <div class="shop">
                     <div class="shop-img">
-                        <img src="./image/oplunn.jpg" alt="">
+                        <img src="./image/banhtrangnen.jpg" alt="">
                     </div>
                     <div class="shop-body">
-                        <h3>Ốp lưng<br>Bộ sưu tập</h3>
-                        <a href="/category?cid=OP" class="cta-btn">Mua ngay<i class="fa fa-arrow-circle-right"></i></a>
+                        <h3>Bánh tráng<br>Mua ngay</h3>
+                        <a href="/category?cid=BT" class="cta-btn">Mua ngay<i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -343,30 +343,19 @@
 <!-- HOT DEAL SECTION -->
 <!--		cái backgound bên phần style #hot-deal.section-->
 <div id="Contact_us" class="section">
-    <!-- container -->
     <div class="container">
-        <!-- row -->
         <div class="row">
             <div class="col-md-12">
                 <div class="Contact_us">
-
-                    <h1 style="margin-top: -24px;
-						color: #e1efea;
-						margin-bottom: 25px;">Về cửa hàng chúng tôi</h1>
-                    <p style="text-transform: uppercase;
-						font-size: 14px;
-						color: white;">Nếu bạn là một người đam mê các món quà tặng hoặc vật dụng được làm thủ công bằng
-                        tay thì chào mừng bạn đến với shop của chúng tôi nơi đây là chỗ bạn có thể thỏa mãn sự sáng tạo
-                        của chính mình.</n></br>
-                        shop chúng tôi luôn cập nhật xu hướng mới nhất vào sản phẩm khiến cho khách hàng không cảm thấy
-                        nhàm chán và điều quan trọng nhất là shop tha thiết muốn đưa những sản phẩm thủ công mang trong
-                        mình giá trị quí báu của lao động đến tận tay các bạn trẻ Việt Nam, góp thêm sắc màu làm đẹp đời
-                        sống.</p>
+                    <h1 style="margin-top: -24px; color: #FFFFFF; margin-bottom: 25px;">Về cửa hàng chúng tôi</h1>
+                    <p style="text-transform: uppercase; font-size: 14px; color: #FFF8DC;">
+                        Nếu bạn là một người đam mê các món quà tặng hoặc vật dụng được làm thủ công bằng tay thì chào mừng bạn đến với shop của chúng tôi nơi đây là chỗ bạn có thể thỏa mãn sự sáng tạo của chính mình.<br/>
+                        shop chúng tôi luôn cập nhật xu hướng mới nhất vào sản phẩm khiến cho khách hàng không cảm thấy nhàm chán và điều quan trọng nhất là shop tha thiết muốn đưa những sản phẩm thủ công mang trong mình giá trị quí báu của lao động đến tận tay các bạn trẻ Việt Nam, góp thêm sắc màu làm đẹp đời sống.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- /row -->
 </div>
 <!-- /container -->
 </div>
@@ -525,11 +514,11 @@
                     <div class="footer">
                         <h3 class="footer-title">Thể loại</h3>
                         <ul class="footer-links">
-                            <li><a href="#">Giảm giá sốc</a></li>
-                            <li><a href="#">Ốp lưng</a></li>
-                            <li><a href="#">Móc khóa</a></li>
-                            <li><a href="#">Thiệp</a></li>
-                            <li><a href="#">Dreamcatcher</a></li>
+                            <li><a href="/category?cid=BT">Bánh tráng</a></li>
+                            <li><a href="/category?cid=BB">Bim Bim</a></li>
+                            <li><a href="/category?cid=H">Hạt</a></li>
+                            <li><a href="/category?cid=K">Khô</a></li>
+                            <li><a href="/category?cid=CB">Combo</a></li>
                         </ul>
                     </div>
                 </div>
@@ -553,11 +542,11 @@
                     <div class="footer">
                         <h3 class="footer-title">Dịch vụ</h3>
                         <ul class="footer-links">
-                            <li><a>Giảm giá sốc</a></li>
-                            <li><a>Ốp lưng</a></li>
-                            <li><a>Móc khóa</a></li>
-                            <li><a>Thiệp</a></li>
-                            <li><a>Dreamcatcher</a></li>
+                            <li><a href="/category?cid=BT">Bánh tráng</a></li>
+                            <li><a href="/category?cid=BB">Bim Bim</a></li>
+                            <li><a href="/category?cid=H">Hạt</a></li>
+                            <li><a href="/category?cid=K">Khô</a></li>
+                            <li><a href="/category?cid=CB">Combo</a></li>
                         </ul>
                     </div>
                 </div>

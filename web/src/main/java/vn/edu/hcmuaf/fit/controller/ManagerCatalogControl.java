@@ -21,8 +21,7 @@ public class ManagerCatalogControl extends HttpServlet {
 
         CatalogService cata = new CatalogService();
         List<category> listC = cata.ListCategory();
-        RoleService role = new RoleService();
-        List<Manager>  m = role.getRole();   request.setAttribute("m", m);
+
         request.setAttribute("listC", listC);
         request.getRequestDispatcher("managerCatalog.jsp").forward(request, response);
     }

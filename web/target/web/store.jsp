@@ -4,9 +4,8 @@
 <%@ page import="vn.edu.hcmuaf.fit.bean.products" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Objects" %>
-<%@ page import="java.lang.reflect.Array" %>
+<%@ page import="java.util.Arrays" %>
 <%@ page import="java.util.ArrayList" %>
-
 <%@ page import="vn.edu.hcmuaf.fit.bean.User" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -284,16 +283,14 @@
                                             <c:if test="${p.isnew != 0}">
                                                 <span class="new">Mới</span>
                                             </c:if>
-
+                                            <c:if test="${p.quantityStock ==0}"><span class="new">Hết hàng</span></c:if>
                                         </div>
                                     </div>
                                     <div class="product-body">
 
                                         <h3 class="product-name"><a
                                                 href="detail?pid=${p.idProduct}">${p.nameProduct}</a></h3>
-                                        <c:if test="${p.quantityStock ==0}"><h4 class="product-price"
-                                                                                style="color:darkred">Sản phẩm hết
-                                            hàng</h4></c:if>
+                                        <h4 class="product-price">${p.priceNew} <del class="product-old-price">${p.priceOld}</del></h4>
 
                                         <div class="product-btns">
 
@@ -402,11 +399,11 @@
                     <div class="footer">
                         <h3 class="footer-title">Thể loại</h3>
                         <ul class="footer-links">
-                            <li><a>Giảm giá sốc</a></li>
-                            <li><a>Ốp lưng</a></li>
-                            <li><a>Móc khóa</a></li>
-                            <li><a>Thiệp</a></li>
-                            <li><a>Dreamcatcher</a></li>
+                            <li><a href="/category?cid=BT">Bánh tráng</a></li>
+                            <li><a href="/category?cid=BB">Bim Bim</a></li>
+                            <li><a href="/category?cid=H">Hạt</a></li>
+                            <li><a href="/category?cid=K">Khô</a></li>
+                            <li><a href="/category?cid=CB">Combo</a></li>
                         </ul>
                     </div>
                 </div>

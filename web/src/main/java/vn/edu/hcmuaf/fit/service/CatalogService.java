@@ -46,6 +46,28 @@ public class CatalogService {
             System.out.println("fail");
         }
     }
+    public String getName(String id) {
+        String query = "SELECT namecat FROM category WHERE IdCat = ?";
+        String categoryName = null; // Initialize with null
+
+        try {
+            conn = new connect().getconConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, id); // Set the parameter value
+            ResultSet rs = ps.executeQuery();
+
+            // Check if result set has data
+            if (rs.next()) {
+                categoryName = rs.getString("namecat"); // Get category name from result set
+            }
+        } catch (Exception e) {
+            e.printStackTrace(); // Print stack trace for debugging
+            System.out.println("fail");
+            // Close resources in finally block
+
+        }
+        return categoryName; // Return category name
+    }
     public static void updateCatalog(category cat) {
         String query = "update category set NameCat=? WHERE IdCat = ?";
         try {
@@ -75,7 +97,7 @@ public class CatalogService {
     }
     public static void main(String[] args) {
         CatalogService cata = new CatalogService();
-        System.out.println(cata.ListCategory());
-       cata.updateCatalog(new category("Mv","V"));
+       System.out.println(cata.getName("BT"));
+
     }
 }
