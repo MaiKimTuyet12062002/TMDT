@@ -31,15 +31,11 @@
                 <div class="col-sm-6">
                     <h2>Quản lý Danh Mục</h2>
                 </div>
-             <%   User user = (User) session.getAttribute("user");
-                List<Manager> ma= (List<Manager>) request.getAttribute("m");
-                for (Manager m : ma) {
-                if(m.getIdU()== user.getIdUser()){
-                if(m.getIsadd()==1){%>
+
                 <div class="col-sm-6">
                     <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i>
                         <span>Thêm danh mục mới</span></a>
-                </div><%}%><%}%><%}%>
+                </div>
             </div>
         </div>
         <table class="table table-striped table-hover">
@@ -75,22 +71,14 @@
                 <td class="category-ten-<%=cat.getNameCat()%>"><%=cat.getNameCat()%>
                 </td>
                 <td>
-                    <%   User user1 = (User) session.getAttribute("user");
-                        List<Manager> ma1= (List<Manager>) request.getAttribute("m");
-                        for (Manager m : ma1) {
-                            if(m.getIdU()== user.getIdUser()){
-                                if(m.getIsedit()==1){%>
+
                     <a href="#editEmployeeModal" class="edit" data-toggle="modal">
                         <button value="<%=cat.getIdCat()%>" style="display: none"></button>
-                        <i class="material-icons" data-toggle="tooltip" title="Sửa">&#xE254;</i></a><%}%><%}%><%}%>
-                    <%   User user2 = (User) session.getAttribute("user");
-                        List<Manager> ma2= (List<Manager>) request.getAttribute("m");
-                        for (Manager m : ma2) {
-                            if(m.getIdU()== user.getIdUser()){
-                                if(m.getIsdelete()==1){%>
+                        <i class="material-icons" data-toggle="tooltip" title="Sửa">&#xE254;</i></a>
+
                     <a href="/deleteCatalog?cid=<%=cat.getIdCat()%>" class="delete"
                        data-toggle="modal">
-                        <i class="material-icons" data-toggle="tooltip" title="Xóa">&#xE872;</i></a><%}%><%}%><%}%>
+                        <i class="material-icons" data-toggle="tooltip" title="Xóa">&#xE872;</i></a>
                 </td>
             </tr>
             <% }%>

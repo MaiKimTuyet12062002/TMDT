@@ -37,4 +37,5 @@ public class category implements Serializable {
                 ", nameCat='" + nameCat + '\'' +
                 '}';
     }
+
 }

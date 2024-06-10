@@ -42,13 +42,10 @@
                     <h2>Quản lý Sản phẩm</h2>
                 </div>
                 <%   User user = (User) session.getAttribute("user");
-                    List<Manager> ma= (List<Manager>) request.getAttribute("m");
-                    for (Manager m : ma) {
-                        if(m.getIdU()== user.getIdUser()){
-                            if(m.getIsadd()==1){%>
+                   %>
                 <div class="col-sm-6">
                     <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i>
-                        <span>Thêm sản phẩm mới</span></a><%}%><%}%><%}%>
+                        <span>Thêm sản phẩm mới</span></a>
 
                 </div>
             </div>
@@ -100,22 +97,14 @@
                 <td class="product-so-luong-<%=pr.getIdProduct()%>"><%=pr.getQuantityStock()%>
                 </td>
                 <td>
-                    <%   User user1 = (User) session.getAttribute("user");
-                        List<Manager> ma1= (List<Manager>) request.getAttribute("m");
-                        for (Manager m : ma1) {
-                            if(m.getIdU()== user.getIdUser()){
-                                if(m.getIsedit()==1){%>
+
                     <a href="#editEmployeeModal" class="edit" data-toggle="modal">
                         <button value="<%=pr.getIdProduct()%>" style="display: none"></button>
-                        <i class="material-icons" data-toggle="tooltip" title="Sửa">&#xE254;</i></a><%}%><%}%><%}%>
-                    <%   User user2 = (User) session.getAttribute("user");
-                        List<Manager> ma2= (List<Manager>) request.getAttribute("m");
-                        for (Manager m : ma2) {
-                            if(m.getIdU()== user.getIdUser()){
-                                if(m.getIsdelete()==1){%>
+                        <i class="material-icons" data-toggle="tooltip" title="Sửa">&#xE254;</i></a>
+
                     <a href="/delete?pid=<%=pr.getIdProduct()%>" class="delete"
                        data-toggle="modal">
-                        <i class="material-icons" data-toggle="tooltip" title="Xóa">&#xE872;</i></a><%}%><%}%><%}%>
+                        <i class="material-icons" data-toggle="tooltip" title="Xóa">&#xE872;</i></a>
                 </td>
             </tr>
             <% }%>

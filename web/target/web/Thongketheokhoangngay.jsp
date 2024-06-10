@@ -38,23 +38,23 @@
     </form>
   </div>
   <div class="row" style="float:right">
-    <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#bieudotheokngay">Xem biểu đồ</button>
-    <div class="modal fade" id="bieudotheokngay" role="dialog">
+    <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#bieudotheokhoangngay">Xem biểu đồ</button>
+    <div class="modal fade" id="bieudotheokhoangngay" role="dialog">
       <div class="modal-dialog">
 
         <!-- Modal content-->
-        <%--                <div class="modal-content">--%>
-        <%--                    <div class="modal-header">--%>
-        <%--                        <button type="button" class="close" data-dismiss="modal">&times;</button>--%>
-        <%--                        <h4 class="modal-title" style="text-align:center">Biểu đồ doanh thu sản phẩm theo khoảng ngày</h4>--%>
-        <%--                    </div>--%>
-        <%--                    <div class="modal-body">--%>
-        <%--                        <jsp:include page="BieuDo/bieudodoanhthusanphamtheokhoanngay.jsp"></jsp:include>--%>
-        <%--                    </div>--%>
-        <%--                    <div class="modal-footer">--%>
-        <%--                        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>--%>
-        <%--                    </div>--%>
-        <%--                </div>--%>
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title" style="text-align:center">Biểu đồ doanh thu sản phẩm theo tháng</h4>
+          </div>
+          <div class="modal-body">
+            <jsp:include page="bieudo/bieudodoanhthutheokhoangngay.jsp"></jsp:include>--%>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+          </div>
+        </div>
 
       </div>
     </div>

@@ -34,7 +34,7 @@ public class ManageControl extends HttpServlet {
             endPage++;
         }
         RoleService role = new RoleService();
-        List<Manager>  m = role.getRole();   request.setAttribute("m", m);
+//        List<Manager>  m = role.getRole();   request.setAttribute("m", m);
         List<products> list_page = mana.paging(index);
         List<products> listP = mana1.getAllProduct();
         List<category> listC = mana1.getAllCategory();
