@@ -59,6 +59,7 @@
 					User user = (User) session.getAttribute("user");
 					if (user != null) {
 				%>
+
 				<li><a href="/successAccount"><i class="fa fa-user-o"></i> <%= user.getNameUser() %></a></li>
 				<li><a href="/historyinvoice"><i class="fa fa-bars"></i>Lịch sử mua hàng</a></li>
 				<%--    Nếu Roleus = 1 thì là admin hiện chữ tài khoản     --%>
@@ -69,6 +70,7 @@
 				<%
 					}
 				%>
+
 				<%--					--%>
 				<li><a href="logout"><i class="fa fa-sign-out"></i> Đăng xuất</a></li>
 
@@ -293,7 +295,7 @@
 					<!-- product tab nav -->
 					<ul class="tab-nav">
 						<li class="active"><a data-toggle="tab" href="#tab1">Mô tả</a></li>
-						<li><a data-toggle="tab" href="#tab3">Nhận xét(${countAllReview })</a></li>
+						<li><a data-toggle="tab" href="#tab3">Bình luận(${countAllReview })</a></li>
 					</ul>
 					<!-- /product tab nav -->
 
@@ -312,108 +314,31 @@
 						<div id="tab3" class="tab-pane fade in">
 							<div class="row">
 								<!-- Rating -->
-								<div class="col-md-3">
-									<div id="rating">
-										<div class="rating-avg">
-
-											<span>Điểm trung bình : ${avg}</span>
-											<div class="rating-stars">
-												<i class="fa fa-star"></i>
-											</div>
-										</div>
-										<ul class="rating">
-											<li>
-												<div class="rating-stars">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-												</div>
-												<div class="rating-progress">
-													<div style="width: 80%;"></div>
-												</div>
-												<span class="sum">3</span>
-											</li>
-											<li>
-												<div class="rating-stars">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-												<div class="rating-progress">
-													<div style="width: 60%;"></div>
-												</div>
-												<span class="sum">2</span>
-											</li>
-											<li>
-												<div class="rating-stars">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-												<div class="rating-progress">
-													<div></div>
-												</div>
-												<span class="sum">0</span>
-											</li>
-											<li>
-												<div class="rating-stars">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-													<i class="fa fa-star-o"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-												<div class="rating-progress">
-													<div></div>
-												</div>
-												<span class="sum">0</span>
-											</li>
-											<li>
-												<div class="rating-stars">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-													<i class="fa fa-star-o"></i>
-													<i class="fa fa-star-o"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-												<div class="rating-progress">
-													<div></div>
-												</div>
-												<span class="sum">0</span>
-											</li>
-										</ul>
-									</div>
 								</div>
 								<!-- /Rating -->
 <%--								<c:forEach items="${requestScope.listAllReview}" var="r">--%>
 								<!-- Reviews -->
-
+<c:set var="listR" value="${requestScope.listAllReview}"/>
 								<div class="col-md-6">
 									<div id="reviews">
-										<ul class="reviews"><%
-											List<Review> listR = (List<Review>) request.getAttribute("listAllReview");
-											for (Review re : listR) {
-										%>
-											<li>
-												<div class="review-heading">
-													<h5 class="name"><%=re.getNameID()%></h5>
-													<p class="date"><%=re.getDateReview()%></p>
-													<div class="review-rating">
-														<p><%=re.getScore()%>/5   <i class="fa fa-star"></i></p>
+										<ul class="reviews">
+	<c:forEach var="re" items="${listR}">
+		<li>
+			<div class="review-heading">
+				<h5 class="name">${re.nameID}</h5>
+				<p class="date">${re.dateReview}</p>
+				<div class="review-rating">
+					<p>${re.contentReview}</p>
+				</div>
+			</div>
+			<div class="review-body">
+				<a data-toggle="tab" href="#">Trả lời</a>
 
-													</div>
-												</div>
-												<div class="review-body">
-													<p><%=re.getContentReview()%></p>
-												</div>
-											</li>
-											<% }%>
+			</div>
+
+		</li>
+
+	</c:forEach>
 										</ul>
 
 										<ul class="reviews-pagination">
@@ -425,24 +350,22 @@
 										</ul>
 									</div>
 								</div>
-
-<%--								</c:forEach>--%>
 								<!-- /Reviews -->
-								<form action="/addReview" method="post">
+								<form action="addReview" method="post">
 								<!-- Review Form -->
 								<div class="col-md-3">
 									<div id="review-form">
 										<form class="review-form">
 
-											<textarea name="content"class="input" placeholder="Đánh giá của bạn"></textarea>
+											<textarea name="content"class="input" placeholder="Bình luận của bạn"></textarea>
 											<input type="hidden" name="idpro" value="${detail.getIdProduct()}">
-											<div class="input-rating">
-												<span>Đánh giá của bạn: </span>
-												<div class="stars">
-													<input name="score" class="input" type="text" placeholder="Nhập điểm trên thang điểm 5">
-												</div>
+<%--											<div class="input-rating">--%>
+<%--												<span>Bình luận của bạn: </span>--%>
+<%--&lt;%&ndash;												<div class="stars">&ndash;%&gt;--%>
+<%--&lt;%&ndash;													<input name="score" class="input" type="text" placeholder="Nhập điểm trên thang điểm 5">&ndash;%&gt;--%>
+<%--&lt;%&ndash;												</div>&ndash;%&gt;--%>
 
-											</div>
+<%--											</div>--%>
 											<button class="primary-btn">GỬI</button>
 										</form>
 									</div>

@@ -31,8 +31,7 @@ public class ReviewService {
                         rs.getInt(2),
                         rs.getString(3),
                         rs.getTimestamp(4),
-                        rs.getString(5),
-                        rs.getInt(6)
+                        rs.getString(5)
                 ));
             }
         } catch (Exception e) {
@@ -53,7 +52,7 @@ public class ReviewService {
         return 0;
     }
     public void insertReview(Review re) {
-        String query = "insert Review(IdAccount, Idproduct, ContentReview, dateReview,NameID,Score)values(?,?,?,?,?,?)";
+        String query = "insert Review(IdAccount, Idproduct, ContentReview, dateReview,NameID)values(?,?,?,?,?)";
 
         try {
             conn = new connect().getconConnection();//mo ket noi voi sql
@@ -63,27 +62,30 @@ public class ReviewService {
             ps.setString(3,re.getContentReview());
             ps.setTimestamp(4,re.getDateReview());
             ps.setString(5,re.getNameID());
-            ps.setInt(6,re.getScore());
             ps.executeUpdate();
 
         } catch (Exception e) {
         }
     }
     public static void main(String[] args) {
-        ReviewService rw = new ReviewService();
-       double total = 0;
-        List<Review> list = rw.getAllReviewByProductID("1");for (Review o : list) {
-            total += o.getScore();
 
-
-        }
-       // Review re = new Review(3,1,"Tuyệt vời",new Timestamp(new Date().getTime()),"Nhuận",4);
-        DecimalFormat decimalFormat = new DecimalFormat("#.##");
-        //rw.insertReview(re);
-        System.out.println(decimalFormat.format(total/rw.countAllReview()));
-        System.out.println(total);
-        System.out.println(rw.countAllReview());
-        System.out.println((Math.round(total/rw.countAllReview()) * 100) / 100.00);
+        Review review = new Review(3,3,"a",new Timestamp(new Date().getTime()),"a");
+        ReviewService reviewService = new ReviewService();
+        reviewService.insertReview(review);
+//        ReviewService rw = new ReviewService();
+//       double total = 0;
+//        List<Review> list = rw.getAllReviewByProductID("1");for (Review o : list) {
+//            total += o.getScore();
+//
+//
+//        }
+//       // Review re = new Review(3,1,"Tuyệt vời",new Timestamp(new Date().getTime()),"Nhuận",4);
+//        DecimalFormat decimalFormat = new DecimalFormat("#.##");
+//        //rw.insertReview(re);
+//        System.out.println(decimalFormat.format(total/rw.countAllReview()));
+//        System.out.println(total);
+//        System.out.println(rw.countAllReview());
+//        System.out.println((Math.round(total/rw.countAllReview()) * 100) / 100.00);
 
     }
 }

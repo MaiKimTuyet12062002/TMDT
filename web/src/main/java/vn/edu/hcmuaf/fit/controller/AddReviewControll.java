@@ -23,17 +23,20 @@ public class AddReviewControll extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
         String content = request.getParameter("content");
-       int score = Integer.parseInt(request.getParameter("score"));
        int productID = Integer.parseInt(request.getParameter("idpro"));
 
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
-        int idus = user.getIdUser();
-        Date date = new Date();
-        Review re = new Review(idus,productID,content,new Timestamp(new Date().getTime()),user.getNameUser(),score);
-        ReviewService rw= new ReviewService();
-        rw.insertReview(re);
-  request.getRequestDispatcher("Thank.jsp").forward(request,response);
+        if(user!=null) {
+            int idus = user.getIdUser();
+            Date date = new Date();
+            Review re = new Review(idus, productID, content, new Timestamp(new Date().getTime()), user.getNameUser());
+            ReviewService rw = new ReviewService();
+            rw.insertReview(re);
+            System.out.println();
+            request.getRequestDispatcher("Thank.jsp").forward(request, response);
+        }
+        request.getRequestDispatcher("login.jsp").forward(request,response);
         return;
 
     }
