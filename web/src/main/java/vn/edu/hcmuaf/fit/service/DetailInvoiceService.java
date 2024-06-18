@@ -52,11 +52,11 @@ public class DetailInvoiceService {
         return list;
     }
 
+
     public static void main(String[] args) {
 //        DetailInvoice de = new DetailInvoice(1,1,1,1,15000);
         DetailInvoiceService detail = new DetailInvoiceService();
 //        detail.adddetail(de);
-        System.out.println(detail.getAllIn(3));
     }
 }
 

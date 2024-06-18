@@ -304,11 +304,11 @@
                     <div class="footer">
                         <h3 class="footer-title">Thể loại</h3>
                         <ul class="footer-links">
-                            <li><a>Giảm giá sốc</a></li>
-                            <li><a>Ốp lưng</a></li>
-                            <li><a>Móc khóa</a></li>
-                            <li><a>Thiệp</a></li>
-                            <li><a>Dreamcatcher</a></li>
+                            <li><a href="/category?cid=BT">Bánh tráng</a></li>
+                            <li><a href="/category?cid=BB">Bim Bim</a></li>
+                            <li><a href="/category?cid=H">Hạt</a></li>
+                            <li><a href="/category?cid=K">Khô</a></li>
+                            <li><a href="/category?cid=CB">Combo</a></li>
                         </ul>
                     </div>
                 </div>

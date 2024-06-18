@@ -3,7 +3,7 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid" style="color:#FFF; background-color:#e1a560;">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/index">Trang chủ</a>
+            <a class="navbar-brand" href="/adminpage">Trang Admin</a>
         </div>
         <ul class="nav navbar-nav">
             <li ><a href="Thongketheongay.jsp">Theo ngày</a></li>
