@@ -41,16 +41,16 @@ public class DetailConteol extends HttpServlet {
         ProductService ps = new ProductService();
         ArrayList<products> listlq = (ArrayList<products>) ps.getListProductlq(p.getIdCategory());
         int countAllReview = listAllReview.size();
-        for(Review r : listAllReview){
-            total += r.getScore();
-
-        }
+//        for(Review r : listAllReview){
+//            total += r.getScore();
+//
+//        }
         DecimalFormat decimalFormat = new DecimalFormat("#.##");
-        avg= Float.parseFloat(decimalFormat.format(total/rw.countAllReview()));
+        //avg= Float.parseFloat(decimalFormat.format(total/rw.countAllReview()));
         request.setAttribute("listlq",listlq);
         request.setAttribute("listAllReview", listAllReview);
         request.setAttribute("detail",p);
-        request.setAttribute("avg",avg);
+       // request.setAttribute("avg",avg);
         request.setAttribute("countAllReview", countAllReview);
         request.setAttribute("sizeW",sizeW);
         request.getRequestDispatcher("detail.jsp").forward(request,response);

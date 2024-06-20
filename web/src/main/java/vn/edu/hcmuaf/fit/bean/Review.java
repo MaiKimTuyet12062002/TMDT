@@ -10,23 +10,20 @@ public class Review {
     private Timestamp dateReview;
 
     private String nameID;
-    private int score;
 
     public Review(int accountID, String contentReview, Timestamp dateReview, String nameID, int score) {
         this.accountID = accountID;
         this.contentReview = contentReview;
         this.dateReview = dateReview;
         this.nameID = nameID;
-        this.score = score;
     }
 
-    public Review(int accountID, int productID, String contentReview, Timestamp dateReview, String nameID, int score) {
+    public Review(int accountID, int productID, String contentReview, Timestamp dateReview, String nameID) {
         this.accountID = accountID;
         this.productID = productID;
         this.contentReview = contentReview;
         this.dateReview = dateReview;
-        this.nameID = nameID
-        ;   this.score = score;
+        this.nameID = nameID;
     }
 
     public Review() {
@@ -40,7 +37,6 @@ public class Review {
                 ", productID=" + productID +
                 ", contentReview='" + contentReview + '\'' +
                 ", dateReview=" + dateReview +
-                ", score=" + score +
                 ", nameID='" + nameID + '\'' +
                 '}';
     }
@@ -84,11 +80,4 @@ public class Review {
         this.nameID = nameID;
     }
 
-    public int getScore() {
-        return score;
-    }
-
-    public void setScore(int score) {
-        this.score = score;
-    }
 }

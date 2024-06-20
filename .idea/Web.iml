@@ -115,9 +115,9 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="corretto-17" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library" exported="" scope="RUNTIME">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../javax.mail.jar!/" />
@@ -126,7 +126,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="" scope="RUNTIME">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../AccessGoogle-lib/httpcore-4.4.9.jar!/" />
