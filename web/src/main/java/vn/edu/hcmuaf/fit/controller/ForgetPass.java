@@ -9,37 +9,42 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import vn.edu.hcmuaf.fit.bean.User;
 import vn.edu.hcmuaf.fit.dao.UserDao;
 import vn.edu.hcmuaf.fit.service.MailService;
 
-@WebServlet(value = {"/forget"})
+@WebServlet(value ="/forget",name = "forget")
 public class ForgetPass extends HttpServlet{
 
     private UserDao userDao = new UserDao();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html;charset=UTF-8");
-        req.setCharacterEncoding("utf8");
-        RequestDispatcher rd = req.getRequestDispatcher("/quenmatkhau.jsp");
-        rd.forward(req, resp);
+//        resp.setContentType("text/html;charset=UTF-8");
+//        req.setCharacterEncoding("utf8");
+       resp.sendRedirect("quenmatkhau.jsp");
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html;charset=UTF-8");
-        req.setCharacterEncoding("utf8");
+//        resp.setContentType("text/html;charset=UTF-8");
+//        req.setCharacterEncoding("utf8");
         String email = req.getParameter("email");
-        String pass = MailService.randomPassword();
-        userDao.updatePassword(pass, email);
-        Thread run = new Thread(new Runnable() {
-            public void run() {
-                new MailService().sendMail(email,
-                        "mat khau moi cua ban la: "+pass);
-            }
-        });
-        run.start();
-        resp.sendRedirect(req.getContextPath() + "/login");
+        System.out.println(email);
+        User user = userDao.getUserByEmail(email);
+        MailService mailService = new MailService();
+        String erro;
+        if(user!=null){
+            String pass=user.getPass();
+            System.out.println(pass);
+            mailService.sendMail(email,"Lấy lại mật khẩu","mật khẩu của bạn là: "+pass);
+
+            req.getRequestDispatcher("changepasswordInfor.jsp").forward(req,resp);
+        }else{
+          erro="Không tìm thấy tài khoản với email ("+email+" )";
+            req.setAttribute("erro",erro);
+            req.getRequestDispatcher("quenmatkhau.jsp").forward(req,resp);
+        }
     }
 
 }
