@@ -55,17 +55,17 @@
 
         <button class=" bt btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Đăng nhập
         </button>
-        <a href="forget" id="forgot_pswd">Quên mật khẩu?</a>
+        <a href="quenmatkhau.jsp" >Quên mật khẩu?</a>
         <hr>
         <!-- <p>Don't have an account!</p>  -->
         <a class="bt btn btn-primary btn-block" href="/regis"><i class="fas fa-user-plus"></i> Đăng kí</a>
     </form>
 
-    <form action="/reset/password/" class="form-reset">
-        <%--    <input type="email" id="resetEmail" class="form-control" placeholder="Nhập email" required="" autofocus="">--%>
-        <a class="btn btn-primary btn-block" href="forget">quên mật khẩu</a>
-        <a href="/index" id="cancel_reset"><i class="fas fa-angle-left"></i> Trở về</a>
-    </form>
+<%--    <form action="/reset/password/" class="form-reset">--%>
+<%--        &lt;%&ndash;    <input type="email" id="resetEmail" class="form-control" placeholder="Nhập email" required="" autofocus="">&ndash;%&gt;--%>
+<%--        <a class="btn btn-primary btn-block" href="forget">quên mật khẩu</a>--%>
+<%--        <a href="/index" id="cancel_reset"><i class="fas fa-angle-left"></i> Trở về</a>--%>
+<%--    </form>--%>
 
 
     <br>

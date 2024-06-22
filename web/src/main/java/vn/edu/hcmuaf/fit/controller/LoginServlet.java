@@ -79,7 +79,7 @@ public class LoginServlet extends HttpServlet {
 	}
 
 	//}
-	private boolean checkLogin(String email, String pass) {
-		return false;
-	}
+//	private boolean checkLogin(String email, String pass) {
+//		return false;
+//	}
 }
