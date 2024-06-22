@@ -32,13 +32,16 @@
         <div class="social-login">
 
 
-            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-            </fb:login-button>
+            <a href="https://www.facebook.com/v19.0/dialog/oauth?client_id=1586113255570962&redirect_uri=http://localhost:8080/loginFacebook&scope=email">
+                <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Đăng nhập với Facebook</span>
+                </button>
+            </a>
 
 
             <%--  <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Đăng nhập với Google+</span> </button>--%>
-            <a href="https://accounts.google.com/o/oauth2/auth?scope=profile&redirect_uri=http://localhost:8080/LoginGoogleHandler&response_type=code
-		   &client_id=496639621639-8t8qkfjpa9ba96fd3bvphk7b8guk0bpe.apps.googleusercontent.com&approval_prompt=force">
+            <a
+                    href="https://accounts.google.com/o/oauth2/auth?scope=email%20profile&redirect_uri=http://localhost:8080/loginGoogle&response_type=code
+    &client_id=1089316008342-fllevmop2b90sd7mmsqotdo1neb934sg.apps.googleusercontent.com&approval_prompt=force">
                 <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Đăng nhập với Google+</span>
                 </button>
             </a>

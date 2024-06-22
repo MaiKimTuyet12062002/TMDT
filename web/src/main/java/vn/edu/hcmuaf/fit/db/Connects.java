@@ -23,6 +23,7 @@ public class Connects {
 		try{
 			System.out.println(new Connects().getConnect());
 		} catch (Exception e) {
+			System.out.println("new Connects().getConnect()");
 			throw new RuntimeException(e);
 		}
 	}
