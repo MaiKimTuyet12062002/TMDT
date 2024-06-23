@@ -64,11 +64,11 @@
         <a class="bt btn btn-primary btn-block" href="/regis"><i class="fas fa-user-plus"></i> Đăng kí</a>
     </form>
 
-<%--    <form action="/reset/password/" class="form-reset">--%>
-<%--        &lt;%&ndash;    <input type="email" id="resetEmail" class="form-control" placeholder="Nhập email" required="" autofocus="">&ndash;%&gt;--%>
-<%--        <a class="btn btn-primary btn-block" href="forget">quên mật khẩu</a>--%>
-<%--        <a href="/index" id="cancel_reset"><i class="fas fa-angle-left"></i> Trở về</a>--%>
-<%--    </form>--%>
+    <%--    <form action="/reset/password/" class="form-reset">--%>
+    <%--        &lt;%&ndash;    <input type="email" id="resetEmail" class="form-control" placeholder="Nhập email" required="" autofocus="">&ndash;%&gt;--%>
+    <%--        <a class="btn btn-primary btn-block" href="forget">quên mật khẩu</a>--%>
+    <%--        <a href="/index" id="cancel_reset"><i class="fas fa-angle-left"></i> Trở về</a>--%>
+    <%--    </form>--%>
 
 
     <br>

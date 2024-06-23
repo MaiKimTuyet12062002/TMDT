@@ -1,20 +1,18 @@
 package vn.edu.hcmuaf.fit.controller;
 
-import java.io.IOException;
-import java.sql.Date;
-import java.sql.SQLException;
+import vn.edu.hcmuaf.fit.bean.User;
+import vn.edu.hcmuaf.fit.dao.UserDao;
+import vn.edu.hcmuaf.fit.service.MailService;
 
-import javax.mail.MessagingException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import vn.edu.hcmuaf.fit.dao.UserDao;
-import vn.edu.hcmuaf.fit.bean.User;
-import vn.edu.hcmuaf.fit.service.MailService;
+import java.io.IOException;
+import java.sql.Date;
+import java.sql.SQLException;
 
 @WebServlet(value = { "/regis", "/successRegis", "/failRegis"})
 public class RegisServlet extends HttpServlet {
@@ -78,7 +76,6 @@ public class RegisServlet extends HttpServlet {
 
 				User u = new User();
 				u.setKeyactive(activationKey);
-				u.setActive(1);
 				u.setEmailUs(email);
 				u.setRoleUs(0);
 				u.setRegistrationDate(new Date(System.currentTimeMillis()));
