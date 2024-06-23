@@ -12,7 +12,6 @@ import java.sql.SQLException;
 import vn.edu.hcmuaf.fit.bean.products;
 import vn.edu.hcmuaf.fit.db.Connects;
 import vn.edu.hcmuaf.fit.bean.User;
-import vn.edu.hcmuaf.fit.db.DBConnect;
 import vn.edu.hcmuaf.fit.db.JDBiConnector;
 import vn.edu.hcmuaf.fit.db.connect;
 
@@ -26,7 +25,7 @@ public class UserDao {
 
     public static void saveUser(User u) throws SQLException{
         con = getConnect();
-        String sql = "insert into users(NameUser, EmailUs, Pass, Phone, RegistrationDate, RoleUs,Manager, active) values (?,?,?,?,?,?,?,?)";
+        String sql = "insert into users(NameUser, EmailUs, Pass, Phone, RegistrationDate, RoleUs,Manager, active) values (?,?,?,?,?,?,?,1)";
         try {
             pre = con.prepareStatement(sql);
             pre.setString(1, u.getNameUser());
@@ -36,7 +35,6 @@ public class UserDao {
             pre.setDate(5, u.getRegistrationDate());
             pre.setInt(6, u.getRoleUs());
             pre.setInt(7, u.getManager());
-            pre.setInt(8, u.getActive());
             pre.executeUpdate();
             System.out.println("thêm user thành công");
         } catch (SQLException e) {
@@ -98,11 +96,8 @@ public class UserDao {
                 user.setIdUser(res.getInt("IdUser"));
                 user.setRegistrationDate(res.getDate("RegistrationDate"));
                 user.setPhone(res.getString("Phone"));
-                System.out.println(res.getString("NameUser"));
             }
-            System.out.println("check user có");
         } catch (SQLException e) {
-            System.out.println("check user không");
             e.printStackTrace();
         }
         return user;
@@ -195,7 +190,7 @@ public class UserDao {
 
 
 
-    public User getUserByEmail(String email) throws Exception {
+    public static User getUserByEmail(String email) throws Exception {
         User user = null;
         String sql = "select * from users where EmailUs = ?";
         try {
@@ -250,7 +245,7 @@ public class UserDao {
     public static ArrayList<User> getAllUsers() {
         String sql = "SELECT * FROM Users";
         ArrayList<User> users = new ArrayList<>();
-        try (Connection conn = getConnect();
+        try (Connection conn = Connects.getConnect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
@@ -277,7 +272,7 @@ public class UserDao {
     public static int deleteUser(int id) {
         String sql = "DELETE FROM Users WHERE IdUser = ?";
         int result = 0;
-        try (Connection conn = getConnect();
+        try (Connection conn = Connects.getConnect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, id);
             result = pstmt.executeUpdate();
@@ -324,43 +319,21 @@ public class UserDao {
             e.printStackTrace();
         }
     }
-    //Tìm theo email
-//    public  User getUserByEmail(String email) {
-//
-//        String query = "select * from users where EmailUs=?";
-//        try {
-//            Connection con = new Connects().getConnect();
-//            PreparedStatement pre = con.prepareStatement(query);
-//            pre.setString(1,email);
-//            ResultSet res = pre.executeQuery();
-//            while (res.next()) {
-//                User user = new User();
-//                user.setActive(res.getInt("active"));
-//                user.setEmailUs(res.getString("EmailUs"));
-//                user.setRoleUs(res.getInt("RoleUs"));
-//                user.setManager(res.getInt("Manager"));
-//                user.setNameUser(res.getString("NameUser"));
-//                user.setIdUser(res.getInt("IdUser"));
-//                user.setRegistrationDate(res.getDate("RegistrationDate"));
-//                user.setPhone(res.getString("Phone"));
-//                user.setPass(res.getString("Pass"));
-//                return user;
-//            }
-//            res.close();
-//        } catch (Exception e) {
-//            System.out.println("fail");
-//        }
-//        return null;
-//
-//    }
 
     public static void main(String[] args) throws Exception {
         int userId = 3; // IdUser của người dùng cần kiểm tra
-        User user2 = new User();
         User user = new User("Hoài Thu", "21130553@st.hcmuaf.edu.vn","123456","0123456789",1,1,1,"");
         UserDao userDao = new UserDao();
-        user2 = userDao.checkUSERByEmail("21130553@st.hcmuaf.edu.vn");
-        System.out.println(user2.getNameUser());
+//        User user = getUserByEmail("thuydiem@gmail.com");
+////kiểm tra manager có lấy được dữ liệu hay chưa
+//        if (user != null) {
+//            String manager = user.getNameUser();
+//            System.out.println("Manager: " + manager);
+//        } else {
+//            System.out.println("User not found.");
+//        }
+//
+        saveUser(user);
 
     }
 

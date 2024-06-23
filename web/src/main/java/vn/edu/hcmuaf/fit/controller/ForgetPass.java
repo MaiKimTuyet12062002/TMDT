@@ -1,17 +1,15 @@
 package vn.edu.hcmuaf.fit.controller;
 
-import java.io.IOException;
+import vn.edu.hcmuaf.fit.bean.User;
+import vn.edu.hcmuaf.fit.dao.UserDao;
+import vn.edu.hcmuaf.fit.service.MailService;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import vn.edu.hcmuaf.fit.bean.User;
-import vn.edu.hcmuaf.fit.dao.UserDao;
-import vn.edu.hcmuaf.fit.service.MailService;
+import java.io.IOException;
 
 @WebServlet(value ="/forget",name = "forget")
 public class ForgetPass extends HttpServlet{
