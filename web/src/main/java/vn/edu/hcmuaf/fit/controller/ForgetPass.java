@@ -31,7 +31,12 @@ public class ForgetPass extends HttpServlet{
 //        req.setCharacterEncoding("utf8");
         String email = req.getParameter("email");
         System.out.println(email);
-        User user = userDao.getUserByEmail(email);
+        User user = null;
+        try {
+            user = userDao.getUserByEmail(email);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         MailService mailService = new MailService();
         String erro;
         if(user!=null){

@@ -53,6 +53,7 @@ public class LoginServlet extends HttpServlet {
 
 
 		if (u != null) {
+			System.out.println("okkkkkkkkkkkkkkkkkk");
 			HttpSession session = req.getSession();
 			User user = userDao.findUserByMaUser(u.getIdUser());
 			session.setAttribute("user", user);
@@ -65,7 +66,7 @@ public class LoginServlet extends HttpServlet {
 
 			resp.sendRedirect(req.getContextPath() + "/index");
 		} else {
-			req.setAttribute("errorlogin", "tai khoan hoac mat khau khong dung");
+			req.setAttribute("mess", "tài khoản hoặc mật khẩu không đúng");
 			RequestDispatcher rd = req.getRequestDispatcher("/login.jsp");
 			rd.forward(req, resp);
 
