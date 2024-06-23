@@ -25,6 +25,8 @@
 <div id="logreg-forms">
     <form class="form-signin" method="post" action="login">
         <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Đăng nhập</h1>
+        <c:set var="erro" value="${requestScope.mess}" />
+        <h5 style="color: #9500ff">${mess}</h5>
 
         <!-- Đoạn mã mới -->
         <input type="hidden" name="redirectURL" value="index.jsp">
@@ -33,7 +35,8 @@
 
 
             <a href="https://www.facebook.com/v19.0/dialog/oauth?client_id=1586113255570962&redirect_uri=http://localhost:8080/loginFacebook&scope=email">
-                <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Đăng nhập với Facebook</span>
+                <button class="btn fa-book-btn social-btn" type="button" style="background-color: #3b5998; color: white;">
+                    <span><i class="fab fa-facebook-f"></i> Đăng nhập với Facebook</span>
                 </button>
             </a>
 
