@@ -16,7 +16,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>ShopHandMade</title>
+        <title>Ntt Store</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
         <link type="text/css" rel="stylesheet" href="css/slick.css"/>
@@ -34,8 +34,8 @@
         <div class="container">
             <ul class="header-links pull-left">
                 <li><a href="#"><i class="fa fa-phone"></i>0723658910</a></li>
-                <li><a href="#"><i class="fa fa-envelope-o"></i> shopntt@email.com</a></li>
-                <li><a href="#"><i class="fa fa-map-marker"></i> Linh Trung, Thủ Đức</a></li>
+                <li><a href="#"><i class="fa fa-envelope-o"></i>Shopntt@email.com</a></li>
+                <li><a href="#"><i class="fa fa-map-marker"></i>Linh Trung, Thủ Đức</a></li>
             </ul>
             <ul class="header-links pull-right">
                 <%
@@ -102,9 +102,9 @@
                     <table class="table table-bordered tbl-cart">
                         <thead>
                         <tr>
-                            <td class="hidden-xs mn"> ẢNH</td>
-                            <td class="mn" >TÊN</td>
-                            <td class="td-qty mn" >SỐ LƯỢNG</td>
+                            <td class="hidden-xs mn">ẢNH</td>
+                            <td class="mn">TÊN</td>
+                            <td class="td-qty mn">SỐ LƯỢNG</td>
                             <td class="mn">GIÁ</td>
                             <td class="mn">XÓA HÀNG</td>
                         </tr>
@@ -119,7 +119,7 @@
                         <tr>
                             <td class="hidden-xs">
                                 <a href="#">
-                                    <img src="<%=productcart.pro.getImage()%>" alt="ĐẠI DƯƠNG" title="" width="47" height="47">
+                                    <img src="<%=productcart.pro.getImage()%>" alt="#" title="" width="47" height="47">
                                 </a>
                             </td>
                             <td class="npr"><%=productcart.pro.getNameProduct()%><a href="#"></a>
@@ -127,15 +127,14 @@
                             <td>
                                 <div class="input-number">
                                     <form action="/updateCart" method=POST">
-                                        <input type="number" value="<%=productcart.quantity%>" name="quantity">
+                                        <span class="qty-down">-</span>
+                                        <input type="number" value="<%=productcart.quantity%>" name="quantity" min="1" onchange="updateTotal()">
                                         <input value="<%=productcart.pro.getIdProduct()%>" type="hidden" name="idprocart"/>
                                         <span class="qty-up">+</span>
-                                        <span class="qty-down">-</span>
-                                        <button type="submit" class="bt btn btn-primary"><i class="fa fa-pencil"></i>Cập nhật giỏ hàng</button>
                                     </form>
                                 </div>
                             </td>
-                            <td class="price"><%=productcart.pro.getPriceNew()%></td>
+                            <td class="price" data-price="<%=productcart.pro.getPriceNew()%>"><%=productcart.pro.getPriceNew()%></td>
                             <td class="text-center">
                                 <a href="removecart?idpro=<%=productcart.pro.getIdProduct()%>" class="remove_cart" rel="1">
                                     <i class="fa fa-trash" aria-hidden="true"></i>
@@ -146,25 +145,59 @@
                         </c:if>
                         <tr>
                             <th colspan="3">TỔNG TIỀN: </th>
-                            <th colspan="2">${total}</th>
+                            <th colspan="2" id="total">${total}</th>
                         </tr>
                         </tbody>
                     </table>
                 </div>
-                <c:if test="${cart == null}" >
-                Không có sản phẩm trong giỏ hàng
+                <c:if test="${cart == null}">
+                    Không có sản phẩm trong giỏ hàng
                 </c:if>
-                </div>
-                <div class="btn-group btns-cart">
-                    <button type="button" class="bt btn btn-primary"><i class="fa fa-arrow-circle-left"></i><a href="/store"> Tiếp tục mua sắm</a></button>
-
-                    <button type="button" class="bt btn btn-primary"><a href="/invoice">Thanh toán<i class="fa fa-arrow-circle-right"></i></a></button>
-                </div>
+            </div>
+            <div class="btn-group btns-cart">
+                <button type="button" class="bt btn btn-primary"><i class="fa fa-arrow-circle-left"></i><a href="/store"> Tiếp tục mua sắm</a></button>
+                <button type="button" class="bt btn btn-primary"><a href="/invoice">Thanh toán<i class="fa fa-arrow-circle-right"></i></a></button>
             </div>
         </div>
-        <!-- End Cart -->
     </div>
 </div>
+<script>
+    function updateTotal() {
+        const rows = document.querySelectorAll('.tbl-cart tbody tr');
+        let total = 0;
+        rows.forEach(row => {
+            const quantityInput = row.querySelector('input[name="quantity"]');
+            const priceElement = row.querySelector('.price');
+            if (quantityInput && priceElement) {
+                const price = parseFloat(priceElement.getAttribute('data-price'));
+                const quantity = parseInt(quantityInput.value);
+                total += price * quantity;
+            }
+        });
+        document.getElementById('total').textContent = total.toFixed(2);
+    }
+
+    function updateQuantity(element, increment) {
+        const input = element.parentElement.querySelector('input[name="quantity"]');
+        const currentQuantity = parseInt(input.value);
+        const newQuantity = currentQuantity + increment;
+        if (newQuantity >= 1) {
+            input.value = newQuantity;
+            updateTotal();
+        }
+    }
+    document.querySelectorAll('.qty-up').forEach(button => {
+        button.addEventListener('click', function(){updateQuantity(button)
+        });
+    });
+
+    document.querySelectorAll('.qty-down').forEach(button => {
+        button.addEventListener('click', function(){updateQuantity(button)
+        });
+    });
+
+    window.onload = updateTotal;
+</script>
 <script src="js/main.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

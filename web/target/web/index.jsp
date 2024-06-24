@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Trang chủ</title>
+    <title>Ntt Store</title>
 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -50,12 +50,12 @@
         <div class="container">
             <ul class="header-links pull-left">
                 <li><a href="#"><i class="fa fa-phone"></i>0723658910</a></li>
-                <li><a href="#"><i class="fa fa-envelope-o"></i> shopntt@email.com</a></li>
+                <li><a href="#"><i class="fa fa-envelope-o"></i>Shopntt@email.com</a></li>
                 <li><a href="#"><i class="fa fa-map-marker"></i>Linh Trung, Thủ Đức</a></li>
 
             </ul>
 
-            <%--          Đăng nhập thành công thay thế dòng chữ TÀI KHOẢN--%>
+            <%--			Đăng nhập thành công thay thế dòng chữ TÀI KHOẢN--%>
             <ul class="header-links pull-right">
                 <%
                     User user = (User) session.getAttribute("user");
@@ -72,7 +72,7 @@
                 <%
                     }
                 %>
-                <%--                --%>
+                <%--					--%>
                 <li><a href="logout"><i class="fa fa-sign-out"></i> Đăng xuất</a></li>
 
                 <%
@@ -210,39 +210,39 @@
             <div class="col-md-4 col-xs-6">
                 <div class="shop">
                     <div class="shop-img">
-                        <img src="./image/banhtrangnen.jpg" alt="">
-                    </div>
-                    <div class="shop-body">
-                        <h3>BÁNH TRÁNG</h3>
-                        <a href="/category?cid=BT" class="cta-btn">Mua ngay<i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- /shop -->
-
-            <!-- shop -->
-            <div class="col-md-4 col-xs-6">
-                <div class="shop">
-                    <div class="shop-img">
-                        <img src="./image/tc.jpg" alt="">
-                    </div>
-                    <div class="shop-body">
-                        <h3>TRÁI CÂY SẤY</h3>
-                        <a href="/category?cid=TC" class="cta-btn">Mua ngay<i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- /shop -->
-
-            <!-- shop -->
-            <div class="col-md-4 col-xs-6">
-                <div class="shop">
-                    <div class="shop-img">
                         <img src="./image/bim-bim-1.jpg" alt="">
                     </div>
                     <div class="shop-body">
-                        <h3>BIM BIM</h3>
-                        <a href="/category?cid=BB" class="cta-btn">Mua ngay<i class="fa fa-arrow-circle-right"></i></a>
+                        <h3>Bim Bim<br>Mua ngay</h3>
+                        <a href="/category?cid=MK" class="cta-btn">Mua ngay<i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- /shop -->
+
+            <!-- shop -->
+            <div class="col-md-4 col-xs-6">
+                <div class="shop">
+                    <div class="shop-img">
+                        <img src="./image/nenhat.png" alt="">
+                    </div>
+                    <div class="shop-body">
+                        <h3>Hạt<br>Mua ngay</h3>
+                        <a href="/category?cid=H" class="cta-btn">Mua ngay<i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- /shop -->
+
+            <!-- shop -->
+            <div class="col-md-4 col-xs-6">
+                <div class="shop">
+                    <div class="shop-img">
+                        <img src="./image/banhtrangnen.jpg" alt="">
+                    </div>
+                    <div class="shop-body">
+                        <h3>Bánh tráng<br>Mua ngay</h3>
+                        <a href="/category?cid=BT" class="cta-btn">Mua ngay<i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -341,7 +341,7 @@
 <!-- /SECTION -->
 
 <!-- HOT DEAL SECTION -->
-<!--       cái backgound bên phần style #hot-deal.section-->
+<!--		cái backgound bên phần style #hot-deal.section-->
 <div id="Contact_us" class="section">
     <div class="container">
         <div class="row">
@@ -349,8 +349,7 @@
                 <div class="Contact_us">
                     <h1 style="margin-top: -24px; color: #FFFFFF; margin-bottom: 25px;">Về cửa hàng chúng tôi</h1>
                     <p style="text-transform: uppercase; font-size: 14px; color: #FFF8DC;">
-                        Nếu bạn là một người đam mê các món quà tặng hoặc vật dụng được làm thủ công bằng tay thì chào mừng bạn đến với shop của chúng tôi nơi đây là chỗ bạn có thể thỏa mãn sự sáng tạo của chính mình.<br/>
-                        shop chúng tôi luôn cập nhật xu hướng mới nhất vào sản phẩm khiến cho khách hàng không cảm thấy nhàm chán và điều quan trọng nhất là shop tha thiết muốn đưa những sản phẩm thủ công mang trong mình giá trị quí báu của lao động đến tận tay các bạn trẻ Việt Nam, góp thêm sắc màu làm đẹp đời sống.
+                        Sức khỏe của bạn là của cải của chúng tôi
                     </p>
                 </div>
             </div>
@@ -501,11 +500,11 @@
                 <div class="col-md-3 col-xs-6">
                     <div class="footer">
                         <h3 class="footer-title">Về chúng tôi</h3>
-                        <p>ShopHandMade</p>
+                        <p>Ntt Store</p>
                         <ul class="footer-links">
                             <li><a href="#"><i class="fa fa-map-marker"></i>Linh Trung, Thủ Đức</a></li>
                             <li><a href="#"><i class="fa fa-phone"></i>0723658910</a></li>
-                            <li><a href="#"><i class="fa fa-envelope-o"></i>shopntt@email.com</a></li>
+                            <li><a href="#"><i class="fa fa-envelope-o"></i>Shopntt@email.com</a></li>
                         </ul>
                     </div>
                 </div>
@@ -542,11 +541,11 @@
                     <div class="footer">
                         <h3 class="footer-title">Dịch vụ</h3>
                         <ul class="footer-links">
-                            <li><a href="/category?cid=BT">Bánh tráng</a></li>
-                            <li><a href="/category?cid=BB">Bim Bim</a></li>
-                            <li><a href="/category?cid=H">Hạt</a></li>
-                            <li><a href="/category?cid=K">Khô</a></li>
-                            <li><a href="/category?cid=CB">Combo</a></li>
+                            <li><a href="#">Tài khoản</a></li>
+                            <li><a href="#">Giỏ hàng</a></li>
+                            <li><a href="#">Yêu thích</a></li>
+                            <li><a href="#">Theo dõi đơn hàng</a></li>
+                            <li><a href="#">Trợ giúp</a></li>
                         </ul>
                     </div>
                 </div>
@@ -591,3 +590,4 @@
 <script src="js/main.js"></script>
 
 </body>
+</html>

@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Thay đổi mật khẩu</title>
+    <title>Ntt Store</title>
     <link rel="stylesheet" href="css/QuenMK.css">
 </head>
 <body>

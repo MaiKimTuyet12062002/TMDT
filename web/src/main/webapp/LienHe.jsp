@@ -8,7 +8,7 @@
             name="viewport"
             content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
     />
-    <title>Liên hệ</title>
+    <title>Ntt Store</title>
     <link href="css/LienHe.css" rel="stylesheet" type="text/css" />
     <link
             rel="stylesheet"
@@ -55,7 +55,7 @@
         <div class="container">
             <ul class="header-links pull-left">
                 <li><a><i class="fa fa-phone"></i>0723658910</a></li>
-                <li><a><i class="fa fa-envelope-o"></i>shopntt@email.com</a></li>
+                <li><a><i class="fa fa-envelope-o"></i>Shopntt@email.com</a></li>
                 <li><a><i class="fa fa-map-marker"></i>Linh Trung, Thủ Đức</a></li>
             </ul>
             <ul class="header-links pull-right">
@@ -291,11 +291,11 @@
                 <div class="col-md-3 col-xs-6">
                     <div class="footer">
                         <h3 class="footer-title">Về chúng tôi</h3>
-                        <p>Đây là shop có tên là NTT</p>
+                        <p>Ntt Store</p>
                         <ul class="footer-links">
                             <li><a><i class="fa fa-map-marker"></i>Linh Trung, Thủ Đức</a></li>
                             <li><a><i class="fa fa-phone"></i>0723658910</a></li>
-                            <li><a><i class="fa fa-envelope-o"></i>shopntt@email.com</a></li>
+                            <li><a><i class="fa fa-envelope-o"></i>Shopntt@email.com</a></li>
                         </ul>
                     </div>
                 </div>

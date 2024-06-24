@@ -16,7 +16,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Lịch sử mua hàng</title>
+        <title>Ntt Store</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
         <link type="text/css" rel="stylesheet" href="css/slick.css"/>
@@ -40,8 +40,8 @@
         <div class="container">
             <ul class="header-links pull-left">
                 <li><a href="#"><i class="fa fa-phone"></i>0723658910</a></li>
-                <li><a href="#"><i class="fa fa-envelope-o"></i> shopntt@email.com</a></li>
-                <li><a href="#"><i class="fa fa-map-marker"></i> Linh Trung, Thủ Đức</a></li>
+                <li><a href="#"><i class="fa fa-envelope-o"></i>Shopntt@email.com</a></li>
+                <li><a href="#"><i class="fa fa-map-marker"></i>Linh Trung, Thủ Đức</a></li>
             </ul>
             <ul class="header-links pull-right">
                 <%

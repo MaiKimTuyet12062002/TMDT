@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Sản phẩm</title>
+    <title>Ntt Store</title>
 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -55,8 +55,8 @@
         <div class="container">
             <ul class="header-links pull-left">
                 <li><a href="#"><i class="fa fa-phone"></i>0723658910</a></li>
-                <li><a href="#"><i class="fa fa-envelope-o"></i> shopntt@email.com</a></li>
-                <li><a href="#"><i class="fa fa-map-marker"></i> Linh Trung, Thủ Đức</a></li>
+                <li><a href="#"><i class="fa fa-envelope-o"></i>Shopntt@email.com</a></li>
+                <li><a href="#"><i class="fa fa-map-marker"></i>Linh Trung, Thủ Đức</a></li>
             </ul>
             <ul class="header-links pull-right">
                 <%
@@ -386,11 +386,11 @@
                 <div class="col-md-3 col-xs-6">
                     <div class="footer">
                         <h3 class="footer-title">Về chúng tôi</h3>
-                        <p>Đây là shop có tên là NTT</p>
+                        <p>Ntt Store</p>
                         <ul class="footer-links">
                             <li><a><i class="fa fa-map-marker"></i>Linh Trung, Thủ Đức</a></li>
                             <li><a><i class="fa fa-phone"></i>0723658910</a></li>
-                            <li><a><i class="fa fa-envelope-o"></i>shopntt@email.com</a></li>
+                            <li><a><i class="fa fa-envelope-o"></i>Shopntt@email.com</a></li>
                         </ul>
                     </div>
                 </div>
