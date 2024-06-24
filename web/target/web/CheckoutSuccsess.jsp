@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Thanh Toán</title>
+    <title>Ntt Store</title>
     <meta http-equiv="refresh" content="8;url=/index">
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -47,7 +47,7 @@
         <div class="container">
             <ul class="header-links pull-left">
                 <li><a href="#"><i class="fa fa-phone"></i>0723658910</a></li>
-                <li><a href="#"><i class="fa fa-envelope-o"></i> shopntt@email.com</a></li>
+                <li><a href="#"><i class="fa fa-envelope-o"></i>Shopntt@email.com</a></li>
                 <li><a href="#"><i class="fa fa-map-marker"></i>Linh Trung, Thủ Đức</a></li>
 
             </ul>
@@ -103,7 +103,6 @@
                 <div class="col-md-6">
                     <div class="header-search">
                         <form>
-
                             <input name="txt" type="text" class="input" placeholder="Tìm kiếm tại đây">
                             <button type="submit" class="search-btn">Tìm kiếm</button>
                         </form>
@@ -135,30 +134,30 @@
                                 <div class="cart-list">
                                     <div class="product-widget">
                                         <div class="product-img">
-                                            <img src="./image/dc2.jpg" alt="">
+                                            <img src="./image/hat/hathanhnhan.jpg" alt="">
                                         </div>
                                         <div class="product-body">
-                                            <h3 class="product-name"><a href="productdream3.html">Đại dương</a></h3>
-                                            <h4 class="product-price"> 150.000<del class="product-old-price">250.000</del></h4>
+                                            <h3 class="product-name"><a href="#">Hạt hạnh nhân</a></h3>
+                                            <h4 class="product-price">120.000<del class="product-old-price">149.000</del></h4>
                                         </div>
                                         <button class="delete"><i class="fa fa-close"></i></button>
                                     </div>
 
                                     <div class="product-widget">
                                         <div class="product-img">
-                                            <img src="./image/dc6.jpg" alt="">
+                                            <img src="./image/banhtrang/phomai_tom.jpg" alt="">
                                         </div>
                                         <div class="product-body">
 
-                                            <h3 class="product-name"><a href="productdream1.html">Mị</a></h3>
-                                            <h4 class="product-price">240.000<del class="product-old-price">260.000</del></h4>
+                                            <h3 class="product-name"><a href="#">Bánh tráng phomai tôm</a></h3>
+                                            <h4 class="product-price">40.000<del class="product-old-price">80.000</del></h4>
                                         </div>
                                         <button class="delete"><i class="fa fa-close"></i></button>
                                     </div>
                                 </div>
                                 <div class="cart-summary">
                                     <small>2 sản phẩm đã chon</small>
-                                    <h5>Giá tiền: 390.000</h5>
+                                    <h5>Giá tiền: 160.000</h5>
                                 </div>
                                 <div class="cart-btns">
                                     <a href="/cart">Xem giỏ hàng</a>
@@ -301,11 +300,11 @@
                 <div class="col-md-3 col-xs-6">
                     <div class="footer">
                         <h3 class="footer-title">Về chúng tôi</h3>
-                        <p>ShopHandMade</p>
+                        <p>Ntt Store</p>
                         <ul class="footer-links">
                             <li><a href="#"><i class="fa fa-map-marker"></i>Linh Trung, Thủ Đức</a></li>
                             <li><a href="#"><i class="fa fa-phone"></i>0723658910</a></li>
-                            <li><a href="#"><i class="fa fa-envelope-o"></i>shopntt@email.com</a></li>
+                            <li><a href="#"><i class="fa fa-envelope-o"></i>Shopntt@email.com</a></li>
                         </ul>
                     </div>
                 </div>
@@ -314,14 +313,12 @@
                     <div class="footer">
                         <h3 class="footer-title">Thể loại</h3>
                         <ul class="footer-links">
-                            <li><a href="#">Giảm giá sốc</a></li>
-                            <li><a href="#">Ốp lưng</a></li>
-                            <li><a href="#">Móc khóa</a></li>
-                            <li><a href="#">Thiệp</a></li>
-                            <li><a href="#">Dreamcatcher</a></li>
+                            <li><a href="/category?cid=BT">Bánh tráng</a></li>
+                            <li><a href="/category?cid=BB">Bim Bim</a></li>
+                            <li><a href="/category?cid=H">Hạt</a></li>
+                            <li><a href="/category?cid=K">Khô</a></li>
+                            <li><a href="/category?cid=CB">Combo</a></li>
                         </ul>
-
-
                     </div>
                 </div>
 

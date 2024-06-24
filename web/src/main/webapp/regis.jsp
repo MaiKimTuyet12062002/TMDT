@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
  <link href="<c:url value='css/style1.css'/>" rel="stylesheet"
 	type="text/css" />
-  <title>Tài khoản</title>
+  <title>Ntt Store</title>
   <link rel="stylesheet" href="css/Login.css">
   <script src="js/Login.js"></script>
 </head>

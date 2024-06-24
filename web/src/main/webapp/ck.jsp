@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-  <title>Thanh Toán</title>
+  <title>Ntt Store</title>
 <%--  <meta http-equiv="refresh" content="8;url=/index">--%>
   <!-- Google font -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -307,7 +307,7 @@
             <ul class="footer-links">
               <li><a href="#"><i class="fa fa-map-marker"></i>Linh Trung, Thủ Đức</a></li>
               <li><a href="#"><i class="fa fa-phone"></i>0723658910</a></li>
-              <li><a href="#"><i class="fa fa-envelope-o"></i>shopntt@email.com</a></li>
+              <li><a href="#"><i class="fa fa-envelope-o"></i>Shopntt@email.com</a></li>
             </ul>
           </div>
         </div>
@@ -316,14 +316,12 @@
           <div class="footer">
             <h3 class="footer-title">Thể loại</h3>
             <ul class="footer-links">
-              <li><a href="#">Giảm giá sốc</a></li>
-              <li><a href="#">Ốp lưng</a></li>
-              <li><a href="#">Móc khóa</a></li>
-              <li><a href="#">Thiệp</a></li>
-              <li><a href="#">Dreamcatcher</a></li>
+              <li><a href="/category?cid=BT">Bánh tráng</a></li>
+              <li><a href="/category?cid=BB">Bim Bim</a></li>
+              <li><a href="/category?cid=H">Hạt</a></li>
+              <li><a href="/category?cid=K">Khô</a></li>
+              <li><a href="/category?cid=CB">Combo</a></li>
             </ul>
-
-
           </div>
         </div>
 
