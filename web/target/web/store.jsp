@@ -106,7 +106,7 @@
                 <!-- /LOGO -->
 
                 <!-- SEARCH BAR -->
-                <div class="col-md-6">
+                <div  class="col-md-6">
                     <div class="header-search">
                         <form action="search" meathod="get">
 
