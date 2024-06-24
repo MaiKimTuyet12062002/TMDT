@@ -55,7 +55,7 @@
                         <h4 class="modal-title" style="text-align:center">Biểu đồ doanh thu sản phẩm theo tháng</h4>
                     </div>
                     <div class="modal-body">
-                    <jsp:include page="/bieudo/bieudodoanhthutheodanhmuc.jsp"></jsp:include>&ndash;%&gt;
+                    <jsp:include page="/bieudo/bieudodoanhthutheodanhmuc.jsp"></jsp:include>&ndash;
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>

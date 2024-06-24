@@ -55,7 +55,7 @@
 
             </ul>
 
-            <%--			Đăng nhập thành công thay thế dòng chữ TÀI KHOẢN--%>
+            <%--          Đăng nhập thành công thay thế dòng chữ TÀI KHOẢN--%>
             <ul class="header-links pull-right">
                 <%
                     User user = (User) session.getAttribute("user");
@@ -72,7 +72,7 @@
                 <%
                     }
                 %>
-                <%--					--%>
+                <%--                --%>
                 <li><a href="logout"><i class="fa fa-sign-out"></i> Đăng xuất</a></li>
 
                 <%
@@ -210,39 +210,39 @@
             <div class="col-md-4 col-xs-6">
                 <div class="shop">
                     <div class="shop-img">
-                        <img src="./image/bim-bim-1.jpg" alt="">
-                    </div>
-                    <div class="shop-body">
-                        <h3>Bim Bim<br>Mua ngay</h3>
-                        <a href="/category?cid=MK" class="cta-btn">Mua ngay<i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- /shop -->
-
-            <!-- shop -->
-            <div class="col-md-4 col-xs-6">
-                <div class="shop">
-                    <div class="shop-img">
-                        <img src="./image/nenhat.png" alt="">
-                    </div>
-                    <div class="shop-body">
-                        <h3>Hạt<br>Mua ngay</h3>
-                        <a href="/category?cid=H" class="cta-btn">Mua ngay<i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- /shop -->
-
-            <!-- shop -->
-            <div class="col-md-4 col-xs-6">
-                <div class="shop">
-                    <div class="shop-img">
                         <img src="./image/banhtrangnen.jpg" alt="">
                     </div>
                     <div class="shop-body">
-                        <h3>Bánh tráng<br>Mua ngay</h3>
+                        <h3>BÁNH TRÁNG</h3>
                         <a href="/category?cid=BT" class="cta-btn">Mua ngay<i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- /shop -->
+
+            <!-- shop -->
+            <div class="col-md-4 col-xs-6">
+                <div class="shop">
+                    <div class="shop-img">
+                        <img src="./image/tc.jpg" alt="">
+                    </div>
+                    <div class="shop-body">
+                        <h3>TRÁI CÂY SẤY</h3>
+                        <a href="/category?cid=TC" class="cta-btn">Mua ngay<i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- /shop -->
+
+            <!-- shop -->
+            <div class="col-md-4 col-xs-6">
+                <div class="shop">
+                    <div class="shop-img">
+                        <img src="./image/bim-bim-1.jpg" alt="">
+                    </div>
+                    <div class="shop-body">
+                        <h3>BIM BIM</h3>
+                        <a href="/category?cid=BB" class="cta-btn">Mua ngay<i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -341,7 +341,7 @@
 <!-- /SECTION -->
 
 <!-- HOT DEAL SECTION -->
-<!--		cái backgound bên phần style #hot-deal.section-->
+<!--       cái backgound bên phần style #hot-deal.section-->
 <div id="Contact_us" class="section">
     <div class="container">
         <div class="row">
@@ -591,4 +591,3 @@
 <script src="js/main.js"></script>
 
 </body>
-</html>
