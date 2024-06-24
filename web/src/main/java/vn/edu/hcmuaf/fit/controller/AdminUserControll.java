@@ -15,7 +15,7 @@ public class AdminUserControll extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("QuanLyUser.jsp");
         RoleService role = new RoleService();
-        List<Manager> m = role.getRole();   request.setAttribute("m", m);
+//        List<Manager> m = role.getRole();   request.setAttribute("m", m);
         requestDispatcher.forward(request, response);
     }
 
