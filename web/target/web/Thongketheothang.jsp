@@ -33,7 +33,7 @@
     <div class="row">
         <div class="col-sm-3">
             <h1>Mời chọn tháng:</h1>
-            <form action="theothang" method="post">
+            <form action="theothangn" method="post">
                 <input type="month" name="thang">
                 <button class="btn btn-sm btn-defaut" type="submit">Thống kê</button>
             </form>
@@ -52,7 +52,7 @@
                         <h4 class="modal-title" style="text-align:center">Biểu đồ doanh thu sản phẩm theo tháng</h4>
                     </div>
                     <div class="modal-body">
-                        <jsp:include page="bieudo/bieudodoanhthutheothang.jsp"></jsp:include>--%>
+                        <jsp:include page="bieudo/bieudodoanhthutheothang.jsp"></jsp:include>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
