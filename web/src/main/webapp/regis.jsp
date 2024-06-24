@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
  <link href="<c:url value='css/style1.css'/>" rel="stylesheet"
 	type="text/css" />
-  <title>Tài khoản</title>
+  <title>Ntt Store</title>
   <link rel="stylesheet" href="css/Login.css">
   <script src="js/Login.js"></script>
 </head>
@@ -23,6 +23,8 @@
 <div id="logreg-forms">
   <form class="form-signin" onsubmit="checkRegis()" method="post">
     <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Đăng Ký</h1>
+    <c:set var="erro" value="${requestScope.mess}" />
+    <h5 style="color: #9500ff">${mess}</h5>
     <input type="text" name="fullname" id="fullname" class="form-control" placeholder="Họ và tên" required="" autofocus="">
     <input type="email" id="email" name="email" class="form-control" placeholder="Nhập email" required autofocus="">
     <input type="password" id="pass" name="pass" class="form-control" placeholder="Mật khẩu" required autofocus="">
@@ -39,6 +41,8 @@
 	function checkRegis() {
 		var pass = document.getElementById("pass").value
 		var repass = document.getElementById("repass").value
+        var email = document.getElementById("email").value
+      var sdt = document.getElementById("sodt").value
 		if(pass != repass){
 			alert("mật khẩu không trùng khớp");
 			return false;
@@ -47,6 +51,18 @@
 			alert("mật khẩu không được để trống");
 			return false;
 		}
+        else if(pass.length < 6){
+          alert("Mật khẩu phải có ít nhất 6 ký tự");
+          return false;
+        }
+        else if(!(sdt.matches("^0\\d{9}$"))){
+          alert("Mật khẩu phải có ít nhất 6 ký tự");
+          return false;
+        }
+        else if(email == ""){
+          alert("email không được để trống");
+          return false;
+        }
 	}
 </script>
 

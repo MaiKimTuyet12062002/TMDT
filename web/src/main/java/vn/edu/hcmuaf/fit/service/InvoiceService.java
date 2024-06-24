@@ -126,6 +126,19 @@ public class InvoiceService {
         }
         return 0;
     }
+    public void removeOder (String IdInvoice) {
+        String query = "UPDATE category\n" +
+                "SET DeleteOder = 1\n" +
+                "WHERE IdInvoice = ?";
+        try {
+            conn = new connect().getconConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, IdInvoice);
+            ps.executeUpdate();
+        } catch (Exception e) {
+            System.out.println("fail");
+        }
+    }
 
 
     public static void main(String[] args) {

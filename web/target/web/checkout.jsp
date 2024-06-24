@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Thanh Toán</title>
+    <title>Ntt Store</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
     <link type="text/css" rel="stylesheet" href="css/slick.css"/>
@@ -26,8 +26,8 @@
         <div class="container">
             <ul class="header-links pull-left">
                 <li><a href="#"><i class="fa fa-phone"></i>0723658910</a></li>
-                <li><a href="#"><i class="fa fa-envelope-o"></i> shopntt@email.com</a></li>
-                <li><a href="#"><i class="fa fa-map-marker"></i> Linh Trung, Thủ Đức</a></li>
+                <li><a href="#"><i class="fa fa-envelope-o"></i>Shopntt@email.com</a></li>
+                <li><a href="#"><i class="fa fa-map-marker"></i>Linh Trung, Thủ Đức</a></li>
             </ul>
             <ul class="header-links pull-right">
                 <%
@@ -188,40 +188,29 @@
                             %>
                             <div class="order-products">
                                 <div class="order-col">
-                                    <div><%=productcart.pro.getNameProduct()%>
-                                    </div>
-                                    <div><%=productcart.quantity%>
-                                    </div>
-                                    <div><%=productcart.pro.getPriceNew()%>
-                                    </div>
+                                    <div><%=productcart.pro.getNameProduct()%></div>
+                                    <div><%=productcart.quantity%></div>
+                                    <div><%=productcart.pro.getPriceNew()%></div>
                                 </div>
                             </div>
                             <%}%>
                         </c:if>
                         <div class="order-col">
                             <div>Thời gian giao hàng</div>
-                            <div><strong id="lead-time"></strong></div>
+                            <div><strong id="lead-time">2-3 ngày</strong></div>
                         </div>
                         <div class="order-col">
-                            <div>Phí giao hàng</div>
+                            <div>Phí giao hàng </div>
                             <div><strong id="fee">0</strong></div>
                         </div>
                         <div class="order-col">
                             <div><strong>Giá</strong></div>
-                            <div><strong class="order-total">${total}</strong></div>
+                            <div><strong id="total">${total}</strong></div>
                         </div>
                     </div>
-<%--                    <% String option = request.getParameter("type"); %>--%>
-<%--                    <% if (option.equals("Chuyển khoản")) { %>--%>
-<%--                    <p>Bạn đã chọn "Có". Đang chuyển hướng...</p>--%>
-<%--                    <%--%>
-<%--                        // Chuyển hướng sang trang khác nếu cần thiết--%>
-<%--                        response.sendRedirect("ck.jsp");--%>
-<%--                   %>--%>
                     <div class="payment-method">
                         <h3>Phương thức thanh toán</h3>
                         <select name="type">
-                            <option value="ck">Chuyển khoản</option>
                             <option value="tt">Thanh toán khi nhận hàng</option>
                         </select>
                     </div>
@@ -270,7 +259,7 @@
                 <div class="col-md-3 col-xs-6">
                     <div class="footer">
                         <h3 class="footer-title">Về chúng tôi</h3>
-                        <p>Đây là shop có tên là shop</p>
+                        <p>Ntt Store</p>
                         <ul class="footer-links">
                             <li><a href="#"><i class="fa fa-map-marker"></i>Linh Trung, Thủ Đức</a></li>
                             <li><a href="#"><i class="fa fa-phone"></i>0723658910</a></li>
@@ -282,11 +271,11 @@
                     <div class="footer">
                         <h3 class="footer-title">Thể loại</h3>
                         <ul class="footer-links">
-                            <li><a href="#">Giảm giá sốc</a></li>
-                            <li><a href="#">Ốp lưng</a></li>
-                            <li><a href="#">Móc khóa</a></li>
-                            <li><a href="#">Thiệp</a></li>
-                            <li><a href="#">Dreamcatcher</a></li>
+                            <li><a href="/category?cid=BT">Bánh tráng</a></li>
+                            <li><a href="/category?cid=BB">Bim Bim</a></li>
+                            <li><a href="/category?cid=H">Hạt</a></li>
+                            <li><a href="/category?cid=K">Khô</a></li>
+                            <li><a href="/category?cid=CB">Combo</a></li>
                         </ul>
                     </div>
                 </div>

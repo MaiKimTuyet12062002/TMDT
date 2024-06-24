@@ -8,7 +8,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Thống kê theo khoảng ngày</title>
+  <title>Ntt Store</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -49,7 +49,7 @@
             <h4 class="modal-title" style="text-align:center">Biểu đồ doanh thu sản phẩm theo tháng</h4>
           </div>
           <div class="modal-body">
-            <jsp:include page="bieudo/bieudodoanhthutheokhoangngay.jsp"></jsp:include>--%>
+            <jsp:include page="bieudo/bieudodoanhthutheokhoangngay.jsp"></jsp:include>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
