@@ -127,7 +127,7 @@
                             </td>
                             <td>Đang chờ xác nhận</td>
                             <td><a href="detailinvoice?Idinvoice=${l.idIn}">Chi tiết</a></td>
-                            <td><button onclick="cancelOrder(${l.idIn})" class="btn btn-danger">Hủy đơn hàng</button></td>
+                            <td><button onclick="huydonhang(${l.idIn})" class="btn btn-danger">Hủy đơn hàng</button></td>
                         </tr>
                         </c:forEach>
                         </tbody>
@@ -142,23 +142,15 @@
     </div>
 </div>
 <script>
-    function cancelOrder(orderId) {
-        if (confirm('Bạn có chắc chắn muốn hủy đơn hàng có mã ' + orderId + ' không?')) {
-            fetch(`/cancelOrder?orderId=${orderId}`, {
-                method: 'POST'
-            })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        alert('Đơn hàng đã được hủy thành công.');
-                        location.reload();
-                    } else {
-                        alert('Không thể hủy đơn hàng. Vui lòng thử lại sau.');
-                    }
-                })
-                .catch(error => console.error('Lỗi khi hủy đơn hàng:', error));
-        }
+function huydonhang(id){
+    let ok=window.confirm("Bạn có chắc muốn hủy đơn hàng không");
+    if(ok){
+        window.location.href = `cancelOrder?orderId=`+id;
+
+    }else{
+        window.location.href = `historyinvoice`;
     }
+}
 </script>
 <script src="js/main.js"></script>
 <script src="js/jquery.min.js"></script>

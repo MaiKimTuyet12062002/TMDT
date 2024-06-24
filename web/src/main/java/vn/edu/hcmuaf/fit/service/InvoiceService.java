@@ -127,25 +127,23 @@ public class InvoiceService {
         return 0;
     }
     public void removeOder (String IdInvoice) {
-        String query = "UPDATE category\n" +
-                "SET DeleteOder = 1\n" +
-                "WHERE IdInvoice = ?";
+        String query = "DELETE FROM invoices WHERE IdInvoice = ?;";
         try {
             conn = new connect().getconConnection();
             ps = conn.prepareStatement(query);
             ps.setString(1, IdInvoice);
             ps.executeUpdate();
+            System.out.println("ok");
         } catch (Exception e) {
             System.out.println("fail");
         }
     }
 
-
     public static void main(String[] args) {
     InvoiceService in = new InvoiceService();
     System.out.println(in.getAllIn(3));
     //System.out.println(in.getAllInbyMonth("2023-05-01 00:00:00","2023-05-31 23:59:59"));
-
+    in.removeOder("17");
 
 }
     }

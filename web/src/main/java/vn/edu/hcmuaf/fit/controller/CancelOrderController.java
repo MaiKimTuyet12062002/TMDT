@@ -10,10 +10,10 @@ import java.io.IOException;
 public class CancelOrderController extends HttpServlet {
     private static final long serialVersionUID = 1L;
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String id = request.getParameter("orderId");
-        InvoiceService orderId = new InvoiceService();
-        orderId.removeOder(id);
-        response.sendRedirect("/detailinvoice");
+        String idorder=request.getParameter("orderId");
+        InvoiceService invoiceService = new InvoiceService();
+        invoiceService.removeOder(idorder);
+        request.getRequestDispatcher("historyinvoice").forward(request,response);
     }
 
     @Override
