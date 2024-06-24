@@ -33,7 +33,7 @@
     <div class="row">
         <div class="col-sm-3">
             <h1>Mời chọn tháng:</h1>
-            <form action="theothang" method="post">
+            <form action="theothangn" method="post">
                 <input type="month" name="thang">
                 <button class="btn btn-sm btn-defaut" type="submit">Thống kê</button>
             </form>

@@ -224,11 +224,11 @@
             <div class="col-md-4 col-xs-6">
                 <div class="shop">
                     <div class="shop-img">
-                        <img src="./image/nenhat.png" alt="">
+                        <img src="./image/tc.jpg" alt="">
                     </div>
                     <div class="shop-body">
                         <h3>Hạt<br>Mua ngay</h3>
-                        <a href="/category?cid=H" class="cta-btn">Mua ngay<i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="/category?cid=TC" class="cta-btn">Mua ngay<i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
