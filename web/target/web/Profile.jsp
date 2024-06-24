@@ -8,7 +8,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
 
 
 <head>
@@ -48,7 +48,8 @@
                     User user = (User) session.getAttribute("user");
                     if (user != null) {
                 %>
-                <li><a href="success.jsp"><i class="fa fa-user-o"></i> <%= user.getNameUser() %></a></li>
+                <li><a href="success.jsp"><i class="fa fa-user-o"></i> <%= user.getNameUser() %>
+                </a></li>
                 <li><a href="/historyinvoice"><i class="fa fa-bars"></i>Lịch sử mua hàng</a></li>
                 <%--    Nếu Roleus = 1 thì là admin hiện chữ tài khoản     --%>
                 <%
@@ -69,28 +70,28 @@
             </ul>
         </div>
     </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="header-logo">
-                        <a href="/index" class="logo">
-                            <img src="./image/ntt.png" alt="">
-                        </a>
-                    </div>
-                    <div class="page">
-                        <p>LỊCH SỬ MUA HÀNG</p>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="header-logo">
+                    <a href="/index" class="logo">
+                        <img src="./image/ntt.png" alt="">
+                    </a>
                 </div>
-                <div class="col-md-6">
-                    <div class="header-search">
-                        <form>
-                            <input class="input" placeholder="Tìm kiếm tại đây">
-                            <button class="search-btn">Tìm kiếm</button>
-                        </form>
-                    </div>
+                <div class="page">
+                    <p>LỊCH SỬ MUA HÀNG</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="header-search">
+                    <form>
+                        <input class="input" placeholder="Tìm kiếm tại đây">
+                        <button class="search-btn">Tìm kiếm</button>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </header>
 
@@ -106,29 +107,27 @@
                         <thead>
                         <tr>
                             <td class="hidden-xs mn">Mã</td>
-                            <td class="mn" >Tổng tiền</td>
-                            <td class="td-qty mn" >Ngày mua</td>
+                            <td class="mn">Tổng tiền</td>
+                            <td class="td-qty mn">Ngày mua</td>
                             <td class="mn">Trạng thái</td>
+                            <td class="mn">Hành động</td>
                         </tr>
                         </thead>
-                    <c:forEach items="${requestScope.listIn}" var="l">
+                        <c:forEach items="${requestScope.listIn}" var="l">
                         <tbody>
                         <tr>
-<%--                            id--%>
                             <td class="hidden-xs">
-                               ${l.idIn}
+                                    ${l.idIn}
                             </td>
-<%--                            tông tiền--%>
                             <td class="npr">${l.getTotal()}
 
                             </td>
-<%--                            ngay mua--%>
                             <td>
-                                ${l.datecreate}
+                                    ${l.datecreate}
                             </td>
-<%--                            trạng thái--%>
-                            <td >Đang chờ xác nhận</td>
-            <td ><a href="detailinvoice?Idinvoice=${l.idIn}" >XEM CHI TIẾT</a></td>
+                            <td>Đang chờ xác nhận</td>
+                            <td><a href="detailinvoice?Idinvoice=${l.idIn}">Chi tiết</a></td>
+                            <td><button onclick="cancelOrder(${l.idIn})" class="btn btn-danger">Hủy đơn hàng</button></td>
                         </tr>
                         </c:forEach>
                         </tbody>
@@ -136,12 +135,31 @@
                 </div>
             </div>
             <div class="btn-group btns-cart">
-                <button type="button" class="bt btn btn-primary"><i class="fa fa-arrow-circle-left"></i><a href="/index"> Trở về trang chủ</a></button>
+                <button type="button" class="bt btn btn-primary"><i class="fa fa-arrow-circle-left"></i><a
+                        href="/index"> Trở về trang chủ</a></button>
             </div>
         </div>
     </div>
 </div>
-</div>
+<script>
+    function cancelOrder(orderId) {
+        if (confirm('Bạn có chắc chắn muốn hủy đơn hàng có mã ' + orderId + ' không?')) {
+            fetch(`/cancelOrder?orderId=${orderId}`, {
+                method: 'POST'
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Đơn hàng đã được hủy thành công.');
+                        location.reload();
+                    } else {
+                        alert('Không thể hủy đơn hàng. Vui lòng thử lại sau.');
+                    }
+                })
+                .catch(error => console.error('Lỗi khi hủy đơn hàng:', error));
+        }
+    }
+</script>
 <script src="js/main.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
